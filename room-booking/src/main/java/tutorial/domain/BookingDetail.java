@@ -2,6 +2,9 @@ package tutorial.domain;
 
 import java.util.Date;
 
+import io.swagger.annotations.ApiModel;
+
+@ApiModel(description="Booking detail")
 public class BookingDetail extends Booking {
 	public BookingDetail(String description, boolean isInternal, Integer bookingId, GlUser bookBy, Date eventDate) {
 		super(bookingId, bookBy, eventDate);

@@ -4,6 +4,8 @@ import java.util.Date;
 
 import org.springframework.data.annotation.Id;
 
+import io.swagger.annotations.ApiModelProperty;
+
 public class Booking {
 
 	@Id
@@ -11,6 +13,7 @@ public class Booking {
 
 	private GlUser bookBy;
 	
+	@ApiModelProperty(notes="Cannot create a booking with a past date")
 	private Date eventDate;
 
 	public Booking() {
